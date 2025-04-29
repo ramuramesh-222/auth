@@ -1,0 +1,85 @@
+.hoverdisplay{
+    background: rgba(0,0,51,0.9);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+.hoverdisplay div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.hoverdisplay input{
+    width: 400px;
+    height: 50px;
+    border-radius: 15px ;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.251);
+    outline: inherit;
+    border: 2px solid white;
+    color: white;
+}
+.hoverdisplay input::placeholder{
+    color: white;
+}
+
+/* headers */
+.header {
+    height: 4rem;
+    width: 90%;
+    border-radius: 25PX;
+    margin: auto;
+    padding: 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #3b49df;
+}
+
+.header img {
+    height: 100%;
+    border-radius: 3px 15px;
+    background-color: white;
+}
+
+.header input {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.719);
+    box-shadow: 0 1.6px 3.6px 0 rgb(0 0 0 / 13%), 0 0.3px 0.9px 0 rgb(0 0 0 / 11%);
+    width: 25rem;
+    border-radius: 20px;
+    font-size: 16px;
+    height: 40px;
+    line-height: 24px;
+    padding: 7px 8px;
+    color: rgb(8, 9, 10);
+    box-shadow: none;   
+}
+
+.header input:focus {
+    background-color: transparent;
+    border-color: #ffffff;
+    outline: none;
+}
+.header input::placeholder{
+    color: #ffffff;
+}
+.header i {
+    color: white;
+
+}
+
+.headdet {
+    cursor: pointer;
+    margin-left: 4px;
+    color: white;
+    
+}
+
+.headdet:hover {
+    transform: scale(1.2);
+}
+
+
+

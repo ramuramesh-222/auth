@@ -68,3 +68,119 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- import React, { useState } from 'react';
+import axios from 'axios';
+
+const Register = () => {
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    password: '',
+    date_of_birth: '',
+    gender: '',
+    phone: '',
+    course_or_class: '',
+    profile_photo: null,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: files ? files[0] : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const submitData = new FormData();
+    Object.keys(formData).forEach((key) => {
+      submitData.append(key, formData[key]);
+    });
+
+    try {
+      const response = await axios.post('http://localhost:8000/api/register/', submitData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      alert('Registered successfully!');
+      console.log(response.data);
+    } catch (error) {
+      console.error('Registration failed:', error.response?.data || error.message);
+      alert('Registration failed!');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} encType="multipart/form-data">
+      <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
+      <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
+      <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
+      <input type="date" name="date_of_birth" onChange={handleChange} />
+      <select name="gender" onChange={handleChange}>
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="text" name="phone" placeholder="Phone" onChange={handleChange} />
+      <input type="text" name="course_or_class" placeholder="Course/Class" onChange={handleChange} />
+      <input type="file" name="profile_photo" accept="image/*" onChange={handleChange} />
+      <button type="submit">Register</button>
+    </form>
+  );
+};
+
+export default Register;
+ -->
+
+
+
+
+ <!-- # urls.py in your Django app (e.g., urlbackend/urls.py)
+
+from django.urls import path
+from .views import RegisterView
+
+urlpatterns = [
+    path('register/', RegisterView.as_view(), name='register'),
+]
+ -->
+
+
+
+
+ <!-- from rest_framework import generics
+from .serializers import UserSerializer
+from .models import CustomUser
+
+class RegisterView(generics.CreateAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = UserSerializer
+ -->
